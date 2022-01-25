@@ -38,9 +38,9 @@ public class Galton {
 	    if (p < 0 || lng <= p ) continue; // skip out of 0-200 range 
 	    // Get a child index using the regression equation PLUS a random component that
 	    // captures the random mix of the two contributing DNAs.
-	    // The 0.8660282 factor is a function of the c param to preserve the sigma, x=0.5
+	    // The 0.8660282 factor is a function of the c param to preserve the sigma, c=0.5
 	    // double childd = c*mid + (1-c)*p + 0.8660282*sigma*randomno.nextGaussian();
-	    // The 0.7454137 factor is a function of the c param to preserve the sigma, x=1/3
+	    // The 0.7454137 factor is a function of the c param to preserve the sigma, c=1/3
 	    double childd = c*mid + (1-c)*p + 0.7454137*sigma*randomno.nextGaussian();
 	    int child = (int) Math.round(childd); 
 	    if (child < 0 || lng <= child ) continue; // skip out of range
